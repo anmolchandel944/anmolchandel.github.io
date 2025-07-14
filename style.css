@@ -502,6 +502,9 @@ section{
 .progress-line.team-work span::after{
       content: 86%;
 }    
+.progress-line.AI-Utilization-Understanding span::after{
+      content: 58%;
+}    
   
 
 
