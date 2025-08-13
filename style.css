@@ -1,5 +1,4 @@
-/* new update code   */
-/* variables */
+
 :root{
     --body-color: transparent;
     --color-white: rgb(255, 255, 255);
@@ -8,7 +7,7 @@
     --text-color-third: rgb(255, 208, 0);
 
     --first-color: rgb(87, 224, 224);
-    --first-color-hover: rgb(40, 91, 212);
+    --first-color-hover: rgb(42, 91, 212);
 
     --second-color: rgb(0, 201, 255);
     --third-color: rgb(4, 226, 255);
@@ -1323,6 +1322,7 @@ section{
         width: 100%;
     }
 }
+
 
 
 
