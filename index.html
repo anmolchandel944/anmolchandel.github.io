@@ -3,79 +3,165 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Anmol chandel portfolio</title>
-    <link rel="stylesheet" href="style.css">
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
-    <link
+     <meta name="viewport" content="width=device-width, initial-scale=1" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+     <link
     href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
-    rel="stylesheet"
-/>
+    rel="stylesheet"/>
+    <link rel="stylesheet" href="style.css">
+    <title>My Portfolio </title>
 </head>
 <body>
+    
+<div class="cointainer">
 
- <header class="header">
-    <a href="#" class="logo">anmol chandel.</a>
-    <nav class="navbar">
-        <a href="#home-content" style="--i:1"class="active">Home</a>
-        <a href="#about"style="--i:2">About</a>
-        <a href="#skills"style="--i:3">Skill</a>
-        <a href="https://anmolchandel944.github.io/all-page-link/"style="--i:4">Project</a>
-        <a href="#contact"style="--i:5">Contact</a>
-    </nav>
 
- </header>
- <section class="home">
-    <div class="home-content">
-        <h3>Hello, I'm </h3>
-        
-        <div class="container">
-            <div class="typed-out"><h1>Anmol Chandel</h1></div></div>
-        <br><br>
-        <p>
-            Welcome to my portfolio! Here, you'll find a showcase of 
-            <br> my diverse skill set and creative projects
-            <br> spanning various domains. My expertise ranges from
-            <br> technical programming to artistic endeavors,
-            <br>ensuring a unique blend of precision and creativity in all my work.
-            
-        </p>
+      <!-- HEADER -->
+        <nav id="header">
+           <div class="nav-logo">
+                <p class="nav-name">Anmol Chandel</p>
+                <span>.</span>
+           </div>
+           <div class="nav-menu" id="myNavMenu">
+                   <ul class="nav_menu_list">
+                        <li class="nav_list">
+                             <a href="#home" class="nav-link active-link">Home</a>
+                              <div class="circle"></div>
+                        </li>
+                        <li class="nav_list">
+                            <a href="#about" class="nav-link">About</a>
+                              <div class="circle"></div>
+                        </li>
+                        <li class="nav_list">
+                            <a href="#skills" class="nav-link">Skills</a>
+                              <div class="circle"></div>
+                        </li>
+                        <li class="nav_list">
+                              <a href="https://anmolchandel944.github.io/all-page-link/" target="_blank"  class="nav-link">Projects</a>
+                              <div class="circle"></div>
+                        </li>
+                        <li class="nav_list">
+                            <a href="#contact" class="nav-link">Contact</a>
+                              <div class="circle"></div>
+                        </li>
+                   </ul>
+           </div>
+           <div class="nav-button">
+                  <a href="cv.pdf" download class="btn">
+                      Download CV <i class="ri-file-text-line"></i>
+                  </a>
+           </div>
 
-    <div class="home-sci">
-        
-        <a href="https://www.instagram.com/anmolchandel944/?igsh=MXRncnFhOWo5bGJidA%3D%3D"target=”_blank”  style="--i:7"><i class='bx bxl-instagram'></i></a>
-        <a href="https://www.youtube.com/@anmolchandel7744"target=”_blank”  style="--i:8"><i class='bx bxl-youtube'></i></a>
-        <a href="https://x.com/Hellboy11000"target=”_blank”  style="--i:9"><i class='bx bxl-twitter'></i></a>
-       <a href="https://www.facebook.com/people/Anmol-Pal/pfbid0pL2dzrpq9mi8XVxWVo1NPy78nFd8avoajYwTxdJ9cJvCeiN3NK1zmHWGkxY1ptfcl/"target=”_blank”  style="--i:6"><i class='bx bxl-facebook'></i></a> 
-        <a href="https://github.com/Anmolsenpai" target=”_blank”  style="--i:10"><i class='bx bxl-github'></i></i></a>
-        <a href="https://www.linkedin.com/in/anmol-chandel-0b6299236?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"target=”_blank”  style="--i:11"><i class='bx bxl-linkedin' ></i></a>
-        <a href="mailto:anmolchandel944@gmail.com"target=”_blank”  style="--i:12"><i class='bx bxl-gmail' ></i></a>
-        <a href="https://codepen.io/anmol-chandel/pens/forked" target=”_blank”  style="--i:12"><i class='bx bxl-codepen' ></i></i></a>
-    </div>
-       <a href="#about" class="btn-box">More About Me  </a>     
 
+           <div class="nav-menu-btn">
+                 <i class="ri-bar-chart-horizontal-line" onclick="myMenuFunction()"></i>
+           </div>
+        </nav>  
+
+
+
+<main class="wrapper">
+
+      <!-- FEATURES BOX -->
+     <section class="featured-box" id="home">
+        <div class="featured-text">
+             <div class="featured-text-card">
+                 <span>Anmol Chandel.</span>
+             </div>
+             <div class="featured-name">
+                 <p>I'm <span class="typedText">Designer</span></p>
+             </div>
+             <div class="featured-text-info">
+                <p> Experienced frontend developer with a passion for creating visually stunnig and user -friendly websites.</p>
+             </div>
+             <div class="featured-text-btn">
+                 <button type="button" class="btn blue-btn">Hire Me </button>
+                <button class="btn" onclick="downloadCV()">Download CV <i class="ri-file-text-line"></i></button>
+             </div>
+
+             <div class="social_icons">
+    <div class="icons">
+        <a href="https://www.linkedin.com/in/anmol-chandel-0b6299236?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank"  style="--i:7">
+            <i class="ri-linkedin-box-line"></i>
+        </a>
     </div>
-   <span class="home-imgHover"></span>
- </section>
- 
- <section class="about" id="about">
-    <div class="about-img">
-        <img src="profile-pic.png" width="100%">
+    <div class="icons">
+        <a href="https://github.com/Anmolsenpai" target="_blank"  style="--i:8">
+            <i class="ri-github-fill"></i>
+        </a>
     </div>
-    <div class="about-text">
-        <h2>About<span>Me</span></h2>
-        <h4>Programmer</h4>
-        <p> <strong> I’m not just a tech enthusiast — I’m a creative technologist who blends logic, aesthetics, and innovation to bring bold ideas to life. With strong expertise in C programming and algorithm design, I build efficient, scalable solutions for complex problems. I craft responsive and visually appealing websites using HTML/CSS, and I deeply understand AI — not just how to use it, but how it learns, thinks, and enhances real-world projects. From professional PowerPoint presentations that communicate clearly, to photo and video edits that captivate, I create media that tells a story. As a skilled Canva designer, I produce impactful graphics and social content tailored to any brand. I also run a YouTube channel featuring vlogs and tutorials that blend information with creativity. Beyond tech, I express my imagination through original anime art, blending emotion and style in every sketch. Whether you’re seeking smart solutions, eye-catching designs, or meaningful content,
-            <br> I’m here to help bring your vision to reality — with passion, precision, and a touch of artistry. 🚀
-       </strong> </p>
-              <a href="#" class="btn-box">More About Me</a>
+    <div class="icons">
+        <a href="https://www.instagram.com/anmolchandel944/?igsh=MXRncnFhOWo5bGJidA%3D%3D" target="_blank"  style="--i:9">
+            <i class="ri-instagram-line"></i>
+        </a>
     </div>
- </section>
+    <div class="icons">
+        <a href="https://www.youtube.com/@anmolchandel7744" target="_blank"  style="--i:10">
+            <i class="ri-youtube-line"></i>
+        </a>
+    </div>
+    <div class="icons">
+        <a href="https://x.com/Hellboy11000" target="_blank"  style="--i:12">
+            <i class="ri-twitter-x-line"></i>
+        </a>
+    </div>
+    <div class="icons">
+        <a href="https://codepen.io/anmol-chandel/pens/forked" target="_blank"  style="--i:14">
+            <i class="ri-codepen-line"></i>
+        </a>
+    </div>
+</div>
+
+
+
+        </div>
+        <div class="featured-image">
+            <div class="image">
+                 <img src="profile-pic.png" alt="avatar">
+            </div>
+        </div>
+        <div class="scroll-icon-btn">
+            <a href="#about" class="scroll-btn">
+                <i class="ri-mouse-line"></i>
+                <p>Scroll Down</p>
+            </a>
+        </div>
+
+
+     </section> 
+
+
+
+     <!-- about  -->
+<section class="about" id="about">
+    <div class="about-container">
+        <div class="about-text">
+            <h2>About <span>Me</span></h2>
+           
+            <p>
+                <strong>
+                    I’m not just a tech enthusiast — I’m a creative technologist who blends logic, aesthetics, and innovation to bring bold ideas to life. With strong expertise in C programming and algorithm design, I build efficient, scalable solutions for complex problems. I craft responsive and visually appealing websites using HTML/CSS, and I deeply understand AI — not just how to use it, but how it learns, thinks, and enhances real-world projects.
+                    From professional PowerPoint presentations that communicate clearly, to photo and video edits that captivate, I create media that tells a story. As a skilled Canva designer, I produce impactful graphics and social content tailored to any brand. I also run a YouTube channel featuring vlogs and tutorials that blend information with creativity.
+                    Beyond tech, I express my imagination through original anime art, blending emotion and style in every sketch. Whether you’re seeking smart solutions, eye-catching designs, or meaningful content,
+                    <br> I’m here to help bring your vision to reality — with passion, precision, and a touch of artistry. 🚀
+                </strong>
+            </p>
+            <a href="#" class="btn-box">More About Me</a>
+        </div>
+    </div>
+</section>
+
+
+
+
+<!-- SKills section -->
+
 
  <section>
-     <div class="services" id="services">
+     <div class="services" id="skills">
         <div class="container">
-            <h1 class="sub-title">My <sapn>Services</sapn></h1>
+            <h1 class="sub-title">My <span>Skills</span></h1>
             <div class="services-list">
                 
                 <div>
@@ -201,10 +287,19 @@ you control it.  </p>
  
 
 
- <h1 class="sub-title">My<span>Skills</span></h1>
+
+
+
+
+
+
+<!-- my skill bar  -->
+
+
+ <h1 class="sub-title"> Technical skills <span> & </span> Professional skills </h1>
  <section>
-    <div class="container1" id="skills">
-        <h1 class="heading1">Technical skills & Professional skills</h1>
+    <div class="container1" id="pro&skills">
+        
         <div class="technical-bars">
 
  
@@ -312,8 +407,11 @@ you control it.  </p>
     </div>
      
 
- </section> <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+ </section>  
 
+
+
+<!-- contact section code -->
 
 
 <section class="contact" id="contact">
@@ -323,8 +421,8 @@ you control it.  </p>
         <h4>Let's Work Together</h4>
         <p>Hi, I'm Anmol Chandel, a creative technologist with expertise in HTML, CSS, C programming, and a strong interest in Artificial Intelligence. I build responsive web pages, write efficient C programs, and explore how AI works to create smarter digital experiences. Alongside coding, I specialize in professional video and photo editing, turning raw content into engaging visuals. My Canva designs and creative projects are crafted to communicate ideas effectively and beautifully. Whether it's tech, design, or AI-driven solutions, I’m here to turn your ideas into impactful results — with creativity, clarity, and purpose !</p>
             <div class="contact-list">
-                <li><i class='bx bxs-send' style='color:#00eeff' ></i>anmolpal1072004@gmail.com</li><br>
-                <li><i class='bx bx-phone' style='color:#00eeff' ></i>not provided now </li>
+                <li><i class="ri-mail-send-line"></i> anmolpal1072004@gmail.com</li><br>
+                <li><i class="ri-phone-line"></i> not provided now </li>
 
             </div>
            <div class="contact-icons">
@@ -367,17 +465,30 @@ you control it.  </p>
 </section>
  
 
-<div class="last-text">
-    <p>Developed with love by Anmol chandel &copy; 2025 </p>
+
+
+
+
+</main>
+
+
+
 
 </div>
- <a href="#" class="top"><i class='bx bxs-up-arrow-alt'></i> </a>
+
+
+<div class="last-text">
+    <p>Developed with love by Anmol Chandel &copy; 2025</p>
+</div>
+
+<a href="#" class="top"><i class="ri-arrow-up-line"></i></a>
 
 
 
+<script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+<script src="https://unpkg.com/scrollreveal"></script>    
+<script src="main.js"></script>
 
-
- <script src="main.js"></script>
 
 </body>
 </html>
