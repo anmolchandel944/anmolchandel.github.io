@@ -188,6 +188,8 @@ nav{
   font-weight: bold;
   cursor: grab;
   user-select: none;
+  
+  touch-action: none;   /* THIS FIXES MOBILE */
 
   z-index: 9999;
 }
@@ -1401,6 +1403,7 @@ section{
         width: 100%;
     }
 }
+
 
 
 
