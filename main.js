@@ -1,4 +1,81 @@
- // NAVIGATION BAR FUNCTION 
+// my knowledge vault floating button
+ 
+const btn = document.getElementById("floatingBtn");
+
+let wasDragged = false;
+let startX = 0;
+let startY = 0;
+
+Draggable.create(btn, {
+  type: "x,y",
+  inertia: true,
+  edgeResistance: 0.85,
+
+  onPress() {
+    wasDragged = false;
+    startX = this.x;
+    startY = this.y;
+  },
+
+  onDrag() {
+    const dx = Math.abs(this.x - startX);
+    const dy = Math.abs(this.y - startY);
+
+    //  Drag threshold (8px)
+    if (dx > 8 || dy > 8) {
+      wasDragged = true;
+    }
+  },
+
+  onRelease() {
+    snapToEdge(this);
+  }
+});
+
+/*  AUTO SNAP LOGIC */
+function snapToEdge(drag) {
+  const btnWidth = btn.offsetWidth;
+  const viewportWidth = window.innerWidth;
+
+  const currentX = drag.x;
+  const centerX = currentX + btnWidth / 2;
+
+  const snapX =
+    centerX < viewportWidth / 2
+      ? 16
+      : viewportWidth - btnWidth - 16;
+
+  gsap.to(btn, {
+    x: snapX,
+    duration: 0.4,
+    ease: "power3.out"
+  });
+}
+
+/* Prevent open on drag */
+btn.addEventListener("click", (e) => {
+  if (wasDragged) {
+    e.preventDefault(); // ❌ drag ke baad open nahi
+  }
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// NAVIGATION BAR FUNCTION 
 function myMenuFunction() {
     var menuBtn = document.getElementById("myNavMenu");
     menuBtn.classList.toggle("responsive");
@@ -127,5 +204,6 @@ function downloadCV() {
     link.download = 'My_CV.pdf'; // Download hone par file ka naam
     link.click();
 }
+
 
 
