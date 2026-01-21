@@ -560,8 +560,16 @@ you control it.  </p>
 
 
 <div class="last-text">
-    <p>Developed with ❤️ by Anmol Chandel &copy; 2025</p>
+  <p>
+    Developed with ❤️ by Anmol Chandel &copy;
+    <span id="copyright-year"></span>
+  </p>
 </div>
+
+<script>
+  document.getElementById("copyright-year").textContent =
+    new Date().getFullYear();
+</script>
 
 <a href="#" class="top"><i class="ri-arrow-up-line"></i></a>
 
@@ -574,6 +582,7 @@ you control it.  </p>
 
 </body>
 </html>
+
 
 
 
