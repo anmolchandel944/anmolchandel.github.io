@@ -1,6 +1,5 @@
 // my knowledge vault floating button
- 
-const btn = document.getElementById("floatingBtn");
+  const btn = document.getElementById("floatingBtn");
 
 let wasDragged = false;
 let startX = 0;
@@ -21,7 +20,7 @@ Draggable.create(btn, {
     const dx = Math.abs(this.x - startX);
     const dy = Math.abs(this.y - startY);
 
-    //  Drag threshold (8px)
+    //  Drag threshold
     if (dx > 8 || dy > 8) {
       wasDragged = true;
     }
@@ -32,30 +31,35 @@ Draggable.create(btn, {
   }
 });
 
-/*  AUTO SNAP LOGIC */
+/* Auto snap */
 function snapToEdge(drag) {
   const btnWidth = btn.offsetWidth;
-  const viewportWidth = window.innerWidth;
+  const vw = window.innerWidth;
 
-  const currentX = drag.x;
-  const centerX = currentX + btnWidth / 2;
-
+  const centerX = drag.x + btnWidth / 2;
   const snapX =
-    centerX < viewportWidth / 2
+    centerX < vw / 2
       ? 16
-      : viewportWidth - btnWidth - 16;
+      : vw - btnWidth - 16;
 
   gsap.to(btn, {
     x: snapX,
-    duration: 0.4,
+    duration: 0.35,
     ease: "power3.out"
   });
 }
 
-/* Prevent open on drag */
+/*  DESKTOP CLICK */
 btn.addEventListener("click", (e) => {
   if (wasDragged) {
-    e.preventDefault(); // ❌ drag ke baad open nahi
+    e.preventDefault();
+  }
+});
+
+/*  MOBILE TOUCH FIX (IMPORTANT) */
+btn.addEventListener("touchend", (e) => {
+  if (!wasDragged) {
+    window.open(btn.href, "_blank");
   }
 });
 
@@ -204,6 +208,7 @@ function downloadCV() {
     link.download = 'My_CV.pdf'; // Download hone par file ka naam
     link.click();
 }
+
 
 
 
