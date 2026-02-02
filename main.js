@@ -212,3 +212,47 @@ function downloadCV() {
 
 
 
+
+
+
+
+
+
+/* ===== FULL END AUTO SCROLL (RIGHT → LEFT) ===== */
+/* Compatible with .slider1 & .slider-track1 */
+
+const slider1 = document.querySelector(".slider1");
+const track1  = document.querySelector(".slider-track1");
+
+let x = 0;
+const speed = 0.75;   // smooth + mobile friendly
+
+function animateEventScroll() {
+
+  // 🔑 width of ONE full set (because images are duplicated)
+  const oneSetWidth = track1.scrollWidth / 2;
+
+  x -= speed; // RIGHT → LEFT  (–X direction)
+
+  // ✅ reset ONLY after full set is completely shown
+  if (Math.abs(x) >= oneSetWidth) {
+    x = 0;
+  }
+
+  track1.style.transform = `translateX(${x}px)`;
+  requestAnimationFrame(animateEventScroll);
+}
+
+// start animation
+animateEventScroll();
+
+/* 🔁 responsive safety */
+window.addEventListener("resize", () => {
+  x = 0;
+});
+
+
+
+
+
+
